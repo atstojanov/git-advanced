@@ -3,18 +3,19 @@ import React from 'react';
 
 // Import Spectacle Core tags
 import {
-  BlockQuote,
-  Cite,
+  Appear,
   Deck,
-  Heading,
+  Image,
   ListItem,
   List,
-  Quote,
   Slide,
+  Link,
   Text,
+  CodePane
 } from 'spectacle';
 
-import { CodeSlide, Title, CenteredList, Accent, theme } from './utils';
+import { CodeSlide, Title, theme, ResultSlide } from './utils';
+import rebase1 from './snippets/rebase/rebase-1';
 
 export default class Presentation extends React.Component {
   render() {
@@ -39,9 +40,12 @@ export default class Presentation extends React.Component {
             <ListItem>Tooling</ListItem>
           </List>
         </Slide>
-        <Slide id="merging-rebasing">
+        <Slide id="merging-rebasing-1">
           <Title>Merging vs. Rebasing</Title>
+          <Image src="images/rebase/01.svg" />
         </Slide>
+        <CodeSlide {...rebase1} />
+        {/* <ResultSlide {...rebase1} /> */}
         <Slide id="cherrypick">
           <Title>Cherry Picking</Title>
         </Slide>
@@ -54,6 +58,14 @@ export default class Presentation extends React.Component {
         <Slide id="tools">
           <Title>Tooling</Title>
         </Slide>
+        <Slide id="credits">
+          <Title>Links and Credits</Title>
+          <Link href="https://www.atlassian.com/git/tutorials/merging-vs-rebasing" target="_blank">Merging vs Rebasing</Link>
+        </Slide>
+        <Slide id="questions">
+          <Title>?</Title>
+        </Slide>
+
       </Deck>
     );
   }
