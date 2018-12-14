@@ -1,11 +1,10 @@
 export default {
     id: 'rebase-1',
-    title: 'The Merge Option',
+    title: 'The Rebase Option',
     comment: '',
     source: (
         `
-  git checkout feature
-  git merge master
+$ git checkout feature
+$ git rebase master
   `),
-  resultImage: 'images/rebase/02.svg'
 };
