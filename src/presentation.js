@@ -3,21 +3,28 @@ import React from 'react';
 
 // Import Spectacle Core tags
 import {
-  Appear,
   Deck,
-  Image,
   ListItem,
   List,
   Slide,
   Link,
   Text,
-  CodePane
 } from 'spectacle';
 
-import { CodeSlide, Title, theme, ResultSlide, ImageSlide } from './utils';
+import { CodeSlide, Title, theme, ImageSlide } from './utils';
 import mergeSnippet from './snippets/rebase/merge';
 import rebase1 from './snippets/rebase/rebase-1';
 import cherryPick from './snippets/rebase/cherry-pick';
+import lfsTrack from './snippets/lfs/lfs-track';
+import lfsInstall from './snippets/lfs/lfs-install';
+import lfsNewRepo from './snippets/lfs/lfs-new-repo';
+import lfsClone from './snippets/lfs/lfs-clone';
+import lfsCloneSpeed from './snippets/lfs/lfs-clone-speed';
+import lfsPull from './snippets/lfs/lfs-pull';
+import lfsPullSpeedUp from './snippets/lfs/lfs-pull-speed-up';
+import lfsTrack1 from './snippets/lfs/lfs-track-1';
+import lfsUntrack from './snippets/lfs/lfs-untrack';
+import lfsCommitPush from './snippets/lfs/lfs-commit-push';
 
 export default class Presentation extends React.Component {
   render() {
@@ -65,6 +72,16 @@ export default class Presentation extends React.Component {
         <ImageSlide id="lfs-add" title="LFS (Large File Storage)" src="images/lfs/01.svg" comment="Add files to LFS repo." />
         <ImageSlide id="lfs-push" title="LFS (Large File Storage)" src="images/lfs/02.svg" comment="Push files to remote LFS repo." />
         <ImageSlide id="lfs-checkout" title="LFS (Large File Storage)" src="images/lfs/03.svg" comment="Checkout commit from LFS repo." />
+        <CodeSlide {...lfsInstall} />
+        <CodeSlide {...lfsNewRepo} />
+        <CodeSlide {...lfsClone} />
+        <CodeSlide {...lfsCloneSpeed} />
+        <CodeSlide {...lfsPull} />
+        <CodeSlide {...lfsPullSpeedUp} />
+        <CodeSlide {...lfsTrack} />
+        <CodeSlide {...lfsTrack1} />
+        <CodeSlide {...lfsUntrack} />
+        <CodeSlide {...lfsCommitPush} />
 
         <Slide id="sub-modules">
           <Title>Sub Modules</Title>
@@ -75,6 +92,10 @@ export default class Presentation extends React.Component {
         <Slide id="credits">
           <Title>Links and Credits</Title>
           <Link href="https://www.atlassian.com/git/tutorials/merging-vs-rebasing" target="_blank">Merging vs Rebasing</Link>
+          <Link href="https://www.atlassian.com/git/tutorials/git-lfs" target="_blank">Git LFS</Link>
+          <Link href="https://git-scm.com/book/en/v2/Git-Tools-Submodules" target="_blank">Sub Modules</Link>
+          <Link href="https://git-scm.com/book/en/v2/" target="_blank">Git Book</Link>
+
         </Slide>
         <Slide id="questions">
           <Title>?</Title>
